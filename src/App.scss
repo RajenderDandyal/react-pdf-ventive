@@ -1,0 +1,39 @@
+@import "styles/colors";
+@import "styles/index";
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+@mixin mQMD(){
+  @media screen and (min-width: 0px) and (max-width: 900px){
+    @content
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+
+  .container-left {
+    width: 22%;
+    background-color: $primary;
+    padding: 1em 0.5em;
+    position: relative;
+    @include mQMD{
+      display: none;
+    }
+
+  }
+  .container-right {
+    width: 70%;
+    .menuOpen{
+      display: none;
+      @include mQMD{
+        display: block;
+      }
+    }
+  }
+}
