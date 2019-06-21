@@ -29,6 +29,9 @@ body{
   }
   .container-right {
     width: 70%;
+    @include mQMD{
+      width: 100%;
+    }
     .menuOpen{
       display: none;
       @include mQMD{
